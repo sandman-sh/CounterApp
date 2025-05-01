@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Counter app</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <nav class="nav">
+                <button id="info"><i class="fa-solid fa-circle-info"></i></button>
+                <button id="setting"><i class="fa-solid fa-gear"></i></button>
+                <button id="reset-btn" class="reset"><i class="fa-solid fa-rotate-right"></i></button>
+            </nav>
+            <div class="close"></div>
+            <section id="setting-option">
+                <button id="close-btn"><i class="fa-sharp fa-solid fa-x"></i></button>
+                <div class="themes">
+                    <h1 class="themes-title">Select Themes</h1>
+                    <button class="themes-btn theme-black"></button>
+                    <button class="themes-btn theme-white"></button>
+                    <button class="themes-btn theme-purple"></button>
+                    <button class="themes-btn theme-yellowgreen"></button>
+                    <button class="themes-btn theme-maroon"></button>
+                    <button class="themes-btn theme-grey"></button>
+                </div>
+            </section>
+            <section id="info-option">
+                <button id="close-info"><i class="fa-sharp fa-solid fa-x"></i></button>
+                <div class="info-content">
+                    <div class="discription">
+                        <p>A simple counter application where you can increment, decrement, and reset a number. Includes
+                            customizable themes.</p>
+                    </div>
+                    <div class="htu">
+                        <h3 class="htu-title">How to Use:</h3>
+                        <ul>
+                            <li>➕ Click the <strong>plus</strong> button to increase the count.</li>
+                            <li>➖ Click the <strong>minus</strong> button to decrease the count.</li>
+                            <li>🔄 Click the <strong>reset</strong> button to reset to zero.</li>
+                            <li>⚙️ Click the <strong>settings</strong> button to change theme.</li>
+                            <li>ℹ️ Click the <strong>info</strong> button to view this page.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+            <div id="result"></div>
+            <div class="center">
+                <button id="sub-btn" class="sub"><i class="fa-solid fa-minus"></i></button>
+
+                <button id="add-btn" class="add"><i class="fa-solid fa-plus"></i></button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
