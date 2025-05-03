@@ -8,7 +8,8 @@ const closeBtn = document.getElementById("close-btn");
 const info = document.getElementById("info");
 const infoOption = document.getElementById("info-option");
 const closeInfoBtn = document.getElementById("close-info");
-const themes = document.getElementsByClassName("theme");
+const btn = document.getElementsByClassName('globalTheme');
+const themeButtons = document.querySelectorAll('.themes-btn');
 
 result.textContent = 0;
 addition.addEventListener("click", (event) => {
@@ -46,4 +47,28 @@ info.addEventListener("click", (event) => {
 
 closeInfoBtn.addEventListener("click", (event) => {
   infoOption.style.setProperty("display", "none");
+});
+
+themeButtons.forEach((clickBtn) => {
+  clickBtn.addEventListener('click', () => {
+    console.log(`User clicked:`, clickBtn.className);
+
+    document.body.className = '';
+    document.body.classList.add(clickBtn.classList[1]);
+
+    for (let i = 0; i < btn.length; i++) {
+      btn[i].style.backgroundColor = '';
+      btn[i].style.color = '';
+      btn[i].style.border = '';
+    }
+
+    if (clickBtn.classList.contains('theme-white')) {
+      for (let i = 0; i < btn.length; i++) {
+        btn[i].style.backgroundColor = 'white';
+        btn[i].style.color = 'black';
+        btn[i].style.border = '2px solid black';
+      }
+    }
+
+  });
 });
